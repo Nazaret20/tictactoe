@@ -51,10 +51,12 @@ main {
 	height: 100%;
 	font-size: 6rem;
 	font-family: "Orbitron", sans-serif;
-	text-align: center;
 	line-height: 10rem;
 	transition: transform 0.3s ease, color 0.3s ease;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .box span {
@@ -90,6 +92,8 @@ main {
 	height: 100vh;
 	position: absolute;
 	display: flex;
+	flex-direction: column;
+	gap: 3rem;
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.411);
@@ -101,8 +105,15 @@ main {
 p {
 	font-size: 4rem;
 	text-align: center;
-	border: 2px solid;
 	color: rgb(226, 226, 226);
+}
+
+.button {
+	width: 20rem;
+	height: 4rem;
+	font-size: 1.8rem;
+	font-family: cursive, sans-serif;
+
 }
 
 .winner-name {

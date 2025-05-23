@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	function lookingWinner() {
-		boxes.forEach(box => box.classList.remove("winner"));
+		boxes.forEach((box) => box.classList.remove("winner"));
 
 		for (let comb of winnerCombinations) {
 			const [a, b, c] = comb;
@@ -57,7 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
 				applyWinAnimation(b);
 				applyWinAnimation(c);
 
-				message.classList.remove("hidden");
+				setTimeout(() => {
+					message.classList.remove("hidden");
+					confetti({
+						particleCount: 100,
+						spread: 70,
+						origin: { y: 0.6 }
+					  });
+
+				}, 1200);
 				break;
 			}
 		}
