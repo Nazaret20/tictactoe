@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="shortcut icon" href="assets/tic-tac-toe-svgrepo-com.svg" type="image/x-icon" />
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
 		<title>Tic tac toe</title>
 	</head>
@@ -24,9 +25,9 @@
 				<div class="box par" data-index="7"></div>
 				<div class="box nopar" data-index="8"></div>
 			</div>
-            <div class="win-msg">
-                <p>¡Has ganado!</p>
-                <button>Volver a jugar 😊</button>
+            <div class="win-msg hidden">
+                <p>¡Has ganado <span class="winner-name"></span>!</p>
+                <button class="button">Volver a jugar 😊</button>
             </div>
 		</main>
 		<script src="javascript.js"></script>

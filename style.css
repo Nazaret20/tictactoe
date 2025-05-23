@@ -10,19 +10,19 @@ body {
 	width: 100%;
 	height: 100vh;
 	background-color: rgb(0, 87, 94);
+	font-family: cursive, sans-serif;
 }
 
 header {
 	width: 100%;
 	height: 6rem;
-    position: absolute;
-    padding-top: 4rem;
+	position: absolute;
+	padding-top: 4rem;
 }
 
 h1 {
 	font-size: 4rem;
 	color: rgb(221, 221, 221);
-	font-family: cursive, sans-serif;
 	text-align: center;
 }
 
@@ -43,13 +43,28 @@ main {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
-    padding-top: 5rem;
+	padding-top: 5rem;
 }
 
 .box {
 	width: 100%;
 	height: 100%;
-	font-size: 3rem;
+	font-size: 6rem;
+	font-family: "Orbitron", sans-serif;
+	text-align: center;
+	line-height: 10rem;
+	transition: transform 0.3s ease, color 0.3s ease;
+	cursor: pointer;
+}
+
+.box span {
+	display: inline-block;
+	font-size: 5rem;
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.box span.active {
+	transform: scale(1.2);
 }
 
 .par {
@@ -57,6 +72,17 @@ main {
 }
 .nopar {
 	background-color: rgba(0, 149, 168, 0.582);
+}
+
+.x {
+	color: #3ce1e7;
+	text-shadow: 2px 2px 8px #62faff;
+	transform: scale(1.2);
+}
+.o {
+	color: #c2f8ff;
+	text-shadow: 2px 2px 8px #ecfdff;
+	transform: scale(1.2);
 }
 
 .win-msg {
@@ -67,7 +93,9 @@ main {
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.411);
-    visibility: hidden;
+}
+.hidden {
+	display: none;
 }
 
 p {
@@ -75,4 +103,35 @@ p {
 	text-align: center;
 	border: 2px solid;
 	color: rgb(226, 226, 226);
+}
+
+.winner-name {
+	font-size: 4rem;
+}
+
+@keyframes bounceRotate {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	25% {
+		transform: rotate(-10deg) scale(1.1);
+	}
+	50% {
+		transform: rotate(10deg) scale(1.2);
+	}
+	75% {
+		transform: rotate(-5deg) scale(1.1);
+	}
+	100% {
+		transform: rotate(0deg) scale(1);
+	}
+}
+
+.winner-animation {
+	animation: bounceRotate 0.6s ease-in-out;
+}
+
+.box.winner span {
+	color: gold !important;
+	text-shadow: 0 0 20px gold;
 }
